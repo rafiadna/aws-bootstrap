@@ -4,7 +4,7 @@
   "description": "This is the source code from The Bootstrap Guide of **[The Good Parts of AWS](https://gumroad.com/l/aws-good-parts)**. The final result is a template for setting up a new AWS environment from scratch, and each code commit follows the checkpoints in the book.",
   "main": "server.js",
   "scripts": {
-    "start": "node ./node_modules/pm2/bin/pm2 start ./server.js --name hello_aws --log ../logs/app.log ",
+    "start": "node ./node_modules/pm2/bin/pm2 start ./server.js --name hello_aws --log ../logs/app.log --update-env -- --STACK_NAME ${STACK_NAME}",
     "stop": "node ./node_modules/pm2/bin/pm2 stop hello_aws",
     "build": "echo 'Building...'"
   },
